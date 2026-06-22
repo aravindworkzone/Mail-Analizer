@@ -4,10 +4,10 @@ import { SYSTEM_PROMPT, CONTEXT_PROMPT } from './prompts.js';
 
 // Grok exposes an OpenAI-compatible Chat Completions API.
 const client = new OpenAI({
-  apiKey: process.env.GROK_API_KEY,
-  baseURL: process.env.GROK_BASE_URL || 'https://api.x.ai/v1',
+  apiKey: process.env.GROQ_API_KEY,
+  baseURL: process.env.GROQ_BASE_URL || 'https://api.x.ai/v1',
 });
-const MODEL = process.env.GROK_MODEL || 'grok-4';
+const MODEL = process.env.GROQ_MODEL || 'grok-4';
 
 async function chatJson(system, user) {
   const res = await client.chat.completions.create({
