@@ -3,18 +3,16 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Daily Gmail triage: scans unread Primary mail, categorizes with Grok, adds optional web context via Google Custom Search, and writes results to Notion.",
-  "main": "src/index.js",
+  "main": "src/job.js",
   "scripts": {
     "authorize": "node src/gmail/authorize.js",
     "check:notion": "node src/notion/checkNotion.js",
-    "daily": "node src/job.js",
-    "start": "node src/index.js"
+    "daily": "node src/job.js"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.15",
     "dotenv": "^16.4.5",
     "googleapis": "^144.0.0",
-    "node-cron": "^3.0.3",
     "openai": "^4.67.3"
   }
 }
