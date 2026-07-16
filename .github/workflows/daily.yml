@@ -2,7 +2,7 @@ name: Daily Mail Analyzer
 
 on:
   schedule:
-    - cron: '30 23 * * *'   # 5:00 AM IST (UTC+5:30)
+    - cron: '0 13 * * *'
   workflow_dispatch:
 
 jobs:
